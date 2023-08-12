@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>信用卡申请</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			background: url(background.png)#1A2C73 no-repeat fixed top;
+			background-size:contain;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .lableName {
+            width: 60px;
+            line-height: 48px;
+			color: #ffffff;
+			text-align: right;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+        }
+        
+        input,
+        select {
+            border: none;
+            box-sizing: border-box;
+            flex: auto;
+            margin-right: 10px;
+            padding: 0 10px;
+            font-size: 14px;
+			background: none;
+			color:#ffffff
+        }
+        
+        .div_submit {
+            display: block;
+            text-align: center;
+            height: 48px;
+            line-height: 48px;
+            background: #1373EB;
+            border-radius: 650px;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+			width: 100%;
+			margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .div_submit:hover {
+            background-color: #005FD7;
+        }
+        
+        .st_inline {
+            display: flex;
+            height: 48px;
+            line-height: 48px;
+            font-size: 14px;
+			background: #ffffff20;
+			margin-bottom: 8px;
+			padding: 0 16px;
+			border-radius: 50px;
+        }
+        
+        .con {
+			padding:90% 24px 0 24px;
+
+        }
+        
+        .clause {
+            color: #ffffff20;
+            font-size: 12px;
+            line-height: 22px;
+            padding: 20px 0;
+        }
+        
+        .clause_red {
+            color: #CE2D2D;
+        }
+        
+        .clause_blue {
+            color: #ffffff;
+        }
+        
+        #pinyin:disabled {
+            background-color: #fff;
+        }
+        
+        input {
+            font-weight: bold;
+        }
+        
+         ::placeholder {
+            font-weight: normal;
+            /* 设置占位符文本为正常字体 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <form action="second_page.html" method="GET">
+            <div class="st_inline">
+                <div class="lableName" for="fullname">姓名</div>
+                <input type="text" id="fullname" name="fullname" placeholder="请输入" required>
+            </div>
+            <div class="st_inline">
+                <div class="lableName" for="idcard">身份证号</div>
+                <input type="text" id="idcard" name="idcard" placeholder="请输入" required>
+            </div>
+            <form action="second_page.html">
+                <button class="div_submit" type="submit" onclick="saveData()">下一步</button>
+            </form>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function saveData() {
+        var name = document.getElementById("fullname").value;
+        var idNumber = document.getElementById("idcard").value;
+        localStorage.setItem("name", name)
+        localStorage.setItem("idNumber", idNumber)
+    }
+</script>
