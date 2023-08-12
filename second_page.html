@@ -3,47 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>信用卡申请</title>
+    <title>大数据评分系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1A2C73 ;
+            background-color: #1A2C73;
             margin: 0;
             padding: 0;
-			font-size: 14px;
-			color: #2c2c2c;
+            font-size: 14px;
+            color: #2c2c2c;
         }
-		
+        
         .title_form {
-			margin: 16px 16px 8px 16px;
-			border-radius: 6px;
-			height: 60px;
-			border: 16px solid #fff;
-			background:url(logoPay.png) #ffffff center no-repeat;
-			background-size:contain;
-			
+            margin: 16px 16px 8px 16px;
+            border-radius: 6px;
+            height: 60px;
+            border: 16px solid #fff;
+            background: url(logoPay.png) #ffffff center no-repeat;
+            background-size: contain;
         }
         
         .con_div {
             padding: 16px 20px;
             border-radius: 5px;
             background-color: #fff;
-			margin: 0 16px 16px 16px;
-        }
-		
-        .st_inline {
-            height: 48px;
-			line-height: 48px;
-            border-bottom: 1px solid #ECECEC;          
+            margin: 0 16px 16px 16px;
         }
         
-        .inline_label {			
+        .st_inline {
+            height: 48px;
+            line-height: 48px;
+            border-bottom: 1px solid #ECECEC;
+        }
+        
+        .inline_label {
             float: left;
-			line-height: 48px;
-			font-weight: bold;
-			width: 30%;
-			text-align: right;
+            line-height: 48px;
+            font-weight: bold;
+            width: 30%;
+            text-align: right;
         }
         
         .st_input,
@@ -56,36 +55,32 @@
             float: left;
             width: 60%;
             appearance: none;
-			color: #2c2c2c;
+            color: #2c2c2c;
         }
-		
-		.st_inline_note{
+        
+        .st_inline_note {
             border-bottom: 1px solid #ECECEC;
             font-size: 14px;
-			height: 70px;
-			
-		}
-		
-		.st_note{
-			padding: 0 10px;
-			font-size: 14px;
-			float: left;
-			width: 60%;
-			line-height: 18px;
-			padding-top: 8px;
-		}
+            height: 70px;
+        }
         
-
-    
+        .st_note {
+            padding: 0 10px;
+            font-size: 14px;
+            float: left;
+            width: 60%;
+            line-height: 18px;
+            padding-top: 8px;
+        }
     </style>
 
 </head>
 
 <body>
     <form>
-		<div class="title_form"></div>
+        <div class="title_form"></div>
         <div class="con_div">
-          
+
             <div class="st_inline">
                 <div class="inline_label">姓名：</div>
                 <input class="st_input" id="name" placeholder="姓名" type="text" name="companyName" required>
@@ -104,17 +99,17 @@
                 <div class="inline_label">评分：</div>
                 <input class="st_input" id="rating" type="tel" name="companyPhone">
             </div>
-			
+
             <div class="st_inline">
                 <div class="inline_label">风险等级：</div>
                 <input class="st_input" id="level" type="tel" name="companyPhone">
             </div>
-			
+
             <div class="st_inline_note">
                 <div class="inline_label">注意事项：</div>
                 <div class="st_note">评分不足，三方pos机（交易不规范），虚假商户，分期风控，商户编号单一</div>
             </div>
-			
+
         </div>
     </form>
 </body>
