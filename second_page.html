@@ -18,10 +18,11 @@
         .title_form {
             margin: 16px 16px 8px 16px;
             border-radius: 6px;
-            height: 60px;
+            height: 70px;
             border: 16px solid #fff;
             background: url(logoPay.png) #ffffff center no-repeat;
             background-size: contain;
+            background-size: 300px auto;
         }
         
         .con_div {
@@ -41,13 +42,13 @@
             float: left;
             line-height: 48px;
             font-weight: bold;
-            width: 30%;
             text-align: right;
+            width: 70px;
         }
         
         .st_input,
         select {
-            padding: 0 10px;
+            padding: 0 1px;
             border: none;
             font-size: 14px;
             background: none;
@@ -58,19 +59,25 @@
             color: #2c2c2c;
         }
         
-        .st_inline_note {
+        .top {
             border-bottom: 1px solid #ECECEC;
-            font-size: 14px;
-            height: 70px;
+            display: flex;
+            font-weight: bold;
+            line-height: 48px;
+            margin-bottom: 10px;
         }
         
-        .st_note {
-            padding: 0 10px;
-            font-size: 14px;
-            float: left;
-            width: 60%;
-            line-height: 18px;
-            padding-top: 8px;
+        .Left {
+            width: 200px;
+        }
+        
+        .bottom {
+            line-height: 24px;
+            display: flex;
+        }
+        
+        .ratingTop {
+            padding-bottom: 96px;
         }
     </style>
 
@@ -91,23 +98,24 @@
                 <input class="st_input" id="idNumber" type="text" placeholder="身份证号" name="companyAddress">
             </div>
 
-            <div class="st_inline" style="color: #0E6AFF;">
-                c类客户（批卡率30%）
+            <div class="top">
+                <div class="Left">注意事项</div>
+                <div>评分</div>
             </div>
 
-            <div class="st_inline">
-                <div class="inline_label">评分：</div>
-                <input class="st_input" id="rating" type="tel" name="companyPhone">
-            </div>
-
-            <div class="st_inline">
-                <div class="inline_label">风险等级：</div>
-                <input class="st_input" id="level" type="tel" name="companyPhone">
-            </div>
-
-            <div class="st_inline_note">
-                <div class="inline_label">注意事项：</div>
-                <div class="st_note">评分不足，三方pos机（交易不规范），虚假商户，分期风控，商户编号单一</div>
+            <div class="bottom">
+                <div class="Left">
+                    评分不足，
+                    <br> c类客户（批卡率30%），
+                    <br> 三方pos机（交易不规范），
+                    <br> 虚假商户，
+                    <br> 分期风控，
+                    <br> 商户编号单一
+                </div>
+                <div class="rating">
+                    <div class="ratingTop">42</div>
+                    <div>高</div>
+                </div>
             </div>
 
         </div>
@@ -117,6 +125,4 @@
 <script>
     document.getElementById("name").value = localStorage.getItem("name")
     document.getElementById("idNumber").value = localStorage.getItem("idNumber")
-    document.getElementById("rating").value = "42"
-    document.getElementById("level").value = "高"
 </script>
