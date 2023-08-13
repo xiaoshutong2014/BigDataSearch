@@ -42,8 +42,11 @@
             float: left;
             line-height: 48px;
             font-weight: bold;
-            text-align: right;
-            width: 70px;
+        }
+        
+        .inline_label span {
+            margin-right: 30px;
+            background: lawngreen;
         }
         
         .st_input,
@@ -89,7 +92,8 @@
         <div class="con_div">
 
             <div class="st_inline">
-                <div class="inline_label">姓名：</div>
+                <div class="inline_label" style="padding-right: 28px;">姓</div>
+                <div class="inline_label">名：</div>
                 <input class="st_input" id="name" placeholder="姓名" type="text" name="companyName" required>
             </div>
 
@@ -105,15 +109,15 @@
 
             <div class="bottom">
                 <div class="Left">
-                    评分不足，
-                    <br> c类客户（批卡率30%），
-                    <br> 三方pos机（交易不规范），
-                    <br> 虚假商户，
-                    <br> 分期风控，
+                    评分不足
+                    <br> c类客户（批卡率30%）
+                    <br> 三方pos机（交易不规范）
+                    <br> 虚假商户
+                    <br> 分期风控
                     <br> 商户编号单一
                     <br> 风控等级
                 </div>
-                <div class="rating">
+                <div class="rating" style="color: red;">
                     <div class="ratingTop">42</div>
                     <div>高</div>
                 </div>
